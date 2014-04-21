@@ -1,0 +1,23 @@
+<section class="search">
+  <input id="nameFilter" class="form-control" type="text" ng-model="nameFilter" placeholder="Filter..."/>
+</section>
+
+<section class="data">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <th>Bird Common Name</th>
+        <th>How howMany</th>
+        <th>Location</th>
+      </tr>
+      <tr ng-repeat="bird in ebirdList | filter: nameFilter">
+        <td width="50%"><h3>{{bird.comName}} <small>{{bird.sciName}}</small></h3></td>
+        <td width="20%">{{bird.howMany}}</td>
+        <td width="30%">
+          <p><a href="#/location/{{bird.locID}}">{{bird.locName}}</a> <br />
+          {{bird.lat}}, {{bird.lng}}</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>

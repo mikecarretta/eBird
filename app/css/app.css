@@ -1,0 +1,48 @@
+/* app css stylesheet */
+@import url(http://fonts.googleapis.com/css?family=Vollkorn);
+
+.branding {
+  background-color: #376ca8;
+  padding-top: 3em;
+  padding-bottom: 3.5em;
+  color: #fff;
+  border-bottom: 5px solid #2f5d92;
+}
+  .branding h1 {
+    font-family: 'Vollkorn', serif;
+    font-size: 50px;
+    text-shadow: 4px 4px 0 #2f5d92;
+  }
+  .branding small {
+    font-size: 30px;
+    color: #b9cfe8;
+  }
+
+.navigation {
+  padding: 1.5em 1em;
+}
+  .nav-pills > li > a {
+    border: 1px solid #ccc;
+    border-bottom: 3px solid #ccc;
+    margin-bottom: 10px;
+  }
+  .nav-pills > li.active > a {
+    color: #FFF;
+    background-color: #376ca8;
+    border-bottom: 3px solid #376ca8;
+  }
+
+.search {
+  background-color: #eff4f9;
+  padding: 1.5em 1em;
+}
+
+.table h3 {
+  margin: 0;
+}
+
+.spinner {
+  display: block;
+  text-align: center;
+  padding: 4em 0;
+}

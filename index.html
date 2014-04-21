@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" ng-app="ebird">
+<head>
+  <meta charset="utf-8">
+  <title>eBird Local Sightings</title>
+  <link rel="stylesheet" href="app/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="app/css/app.css"/>
+
+</head>
+<body>
+  <header class="branding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+        <h1>eBird <small>Stratford, Connecticut - Current Sightings</small></h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="navigation">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+
+          <ul class="nav nav-pills nav-stacked" ng-controller="NavbarController">
+            <li ng-class="{'active':getClass('/location')}"><a href="#/location">Home</a></li>
+            <li ng-class="{'active':getClass('/stratford')}"><a href="#/stratford">Local Json Example</a></li>
+            <li ng-class="{'active':getClass('/about')}"><a href="#/about">About</a></li>
+          </ul>
+
+          <div class="alert alert-warning">This is a development project to learn AngularJS using the eBird API. Currently the latitude and longitude is hard coded.</div>
+
+        </div>
+        <div class="col-lg-9">
+          <div id="spinner" class="spinner" style="display:none;">
+            <img ng-src="app/img/spinner.gif">
+          </div>
+          <div ng-view></div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="app/libs/angular.min.js"></script>
+  <script src="app/libs/angular-route.min.js"></script>
+  <script src="app/js/app.js"></script>
+  <script src="app/js/services.js"></script>
+  <script src="app/js/controllers.js"></script>
+</body>
+</html>

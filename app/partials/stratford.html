@@ -1,0 +1,20 @@
+<section class="search">
+  <input class="form-control" type="text" ng-model="nameFilter" placeholder="Search..."/>
+</section>
+
+<section class="data">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <th>Bird Common Name</th>
+        <th>Location Name</th>
+        <th>How howMany</th>
+      </tr>
+      <tr ng-repeat="bird in birdLocList | filter: nameFilter">
+        <td><h3>{{bird.comName}}</h3></td>
+        <td>{{bird.locName}}</td>
+        <td>{{bird.howMany}}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
