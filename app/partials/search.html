@@ -1,0 +1,27 @@
+<h2>Search</h2>
+<section class="search">
+  <input id="nameFilter" class="form-control" type="text" ng-model="nameFilter" placeholder="Filter..."/>
+</section>
+
+<section class="data">
+  <div id="spinner" class="spinner" style="display:none;">
+    <img ng-src="app/img/spinner.gif">
+  </div>
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <th>Bird Common Name</th>
+        <th>How howMany</th>
+        <th>Location</th>
+      </tr>
+      <tr ng-repeat="search in ebirdSearch | filter: nameFilter">
+        <td width="50%"><h3>{{search.comName}} <small>{{search.sciName}}</small></h3></td>
+        <td width="20%">{{search.howMany}}</td>
+        <td width="30%">
+          <p><a href="#/location/{{search.locID}}">{{search.locName}}</a> <br />
+          {{search.lat | number:2}}, {{search.lng | number:2}}</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
